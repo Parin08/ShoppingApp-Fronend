@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+.cart:hover {
+  color: rgb(238, 255, 0) !important;
+  font-weight: 800;
+  transition-delay: 0.05s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.removecart{
+  max-height:3rem;
+  margin-top:2rem ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.deliveryCard{
+  margin:2.5rem 5rem;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cartproduct{
+  margin: 0 auto;
+}
+
+.deliveryCard:hover{
+  transform: translateY(-2%);
+  opacity: 1;
+  box-shadow: 2px 3px 20px rgba(10, 113, 6, 0.61);
+  transition-delay: 0.15s;
+  cursor: pointer;
+}
+
+.link:hover{
+  color: rgb(238, 255, 0) !important;
+  transition-delay: 0.05s;
+  font-weight: 500;
+}
+
+.thumbnail{
+  height:125px;
+  width:175px;
+}
+
+.form{
+  background-color: rgb(241, 250, 231);
+  border: 2px solid black;
+  border-radius: 10px;
+  width:33rem !important;
+  margin:5rem auto;
+  padding: 1rem;
+  margin-top:2.2rem !important;
+  box-shadow: 5px 4px 5px rgb(78, 77, 77);
+}
+
+.form .btn{
+  margin:1rem auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form label{
+font-size: 1rem;
+margin:0.2rem;
+font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-login{
+  width:400px !important;
+  padding: 0 4rem !important;
 }
+
+.loginlink{
+  text-decoration: none;
+  color:rgb(0, 8, 255);
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+}
+
+
+
