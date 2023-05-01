@@ -30,7 +30,7 @@ function App() {
       <div className="d-flex flex-column vh-100">
         <div className="flex-grow-1">
        
-          <BrowserRouter forceRefresh={true}>
+          <BrowserRouter basename="/">
             <Header />
        
             <Container>
