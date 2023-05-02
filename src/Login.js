@@ -58,6 +58,12 @@ const Login = () => {
             navigate(0)
             
     }
+
+    const signup = ()=>{
+        navigate('/Signup');
+    }
+
+
     return (
         <>
             <Form onSubmit={handleSubmit} className='form form-login'>
@@ -87,7 +93,7 @@ const Login = () => {
                         <Button type="submit" className='btn btn-success'>Login</Button>
                     </div>
                     <div classNamw="btn">
-                        <a href='/Signup' className='loginlink'>Sign Up</a>
+                        <a onClick={signup} className='loginlink'>Sign Up</a>
                     </div>
 
 
