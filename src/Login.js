@@ -55,7 +55,7 @@ const Login = () => {
             })
             .catch(err => console.log(err))
            
-            navigate(0)
+            navigate("/")
             
     }
 
