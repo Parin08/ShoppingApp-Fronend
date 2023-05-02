@@ -8,13 +8,11 @@ const CartList = () => {
         async function getCart() {
             const res = await fetch("https://shoppingapp.herokuapp.com/product/getfromcart", {
                 credentials: 'include',
-                mode: 'no-cors',
                 headers: {
                     'Content-Type': 'application/json'
                 }
             });
             const data = await res.json();
-            console.log(data)
             setData(data);
 
         }
