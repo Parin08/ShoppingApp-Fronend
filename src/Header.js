@@ -105,6 +105,15 @@ const Header = () => {
         }
     }
 
+    const withoutAuthorise= (val)=>{
+        if(val==='addproduct'){
+            navigate('/AddProduct')
+        }
+        else if(val === 'home'){
+            navigate('/')
+        }
+    }
+
     return (
 
         <>
@@ -117,13 +126,13 @@ const Header = () => {
                     </Nav.Item>
                     {author ?
                         <Nav.Item>
-                            <Nav.Link href="/AddProduct" className='text-white text-uppercase link'>Add Product</Nav.Link>
+                            <Nav.Link onClick={() => withoutAuthorise('addproduct')} className='text-white text-uppercase link'>Add Product</Nav.Link>
                         </Nav.Item>
 
                         : <></>}
 
                     <Nav.Item>
-                        <Nav.Link href="/" className='text-white text-uppercase link'>Home</Nav.Link>
+                        <Nav.Link  onClick={() => withoutAuthorise('home')} className='text-white text-uppercase link'>Home</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link onClick={() => authorise('signout')} className='text-white text-uppercase link'>{login ? "Sign out" : "Sign in"}</Nav.Link>
