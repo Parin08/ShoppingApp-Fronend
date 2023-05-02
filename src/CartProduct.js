@@ -6,7 +6,6 @@ const CartProduct = (props)=>{
 const removeFromCart = (event) => {
     fetch('https://shoppingapp.herokuapp.com/product/addtocart', {
         method: 'POST',
-        credentials: 'include',
         headers: {
             'Content-Type': 'application/json'
         },
