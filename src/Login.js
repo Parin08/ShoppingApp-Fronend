@@ -54,7 +54,14 @@ const Login = () => {
                     
             })
             .catch(err => console.log(err))
-    
+            toast.success("Login successful.", {
+                position: 'top-center',
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+            });
             navigate(0)
          
     

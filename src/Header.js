@@ -119,7 +119,7 @@ const Header = () => {
         <>
 
             <Nav className="d-flex justify-content-between bg-success navbar navbar-expand-lg px-5">
-                <Navbar.Brand href="/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUNtdlWYmEW13EnZOLdpwdRPfP3KzJgb3MTQ&usqp=CAU" alt="Logo" className='img-fluid rounded-circle w-25 shadow bg-white rounded' /></Navbar.Brand>
+                <Navbar.Brand onClick={() => withoutAuthorise('home')}><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUNtdlWYmEW13EnZOLdpwdRPfP3KzJgb3MTQ&usqp=CAU" alt="Logo" className='img-fluid rounded-circle w-25 shadow bg-white rounded' /></Navbar.Brand>
                 <div className='d-flex flex-row-reverse'>
                     <Nav.Item>
                         <Nav.Link onClick={() => authorise('history')} className='text-white text-uppercase link'>Order History</Nav.Link>
