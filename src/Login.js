@@ -34,7 +34,7 @@ const Login = () => {
                         draggable: true,
                     });
                    
-                    navigate('/Login')
+                    navigate('/')
                 }
                    
                 else{
@@ -55,7 +55,7 @@ const Login = () => {
             })
             .catch(err => console.log(err))
            
-            navigate("/")
+    
             
     }
 

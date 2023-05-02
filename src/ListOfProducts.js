@@ -37,7 +37,7 @@ const ListOfProducts = (props) => {
         async function getCartProducts() {
             const res = await fetch('https://shoppingapp.herokuapp.com/authenticate');
             const data = await res.json();
-            if (data === true) {
+            if (data == true) {
             
                 navigate('/Cart');
             } else {
