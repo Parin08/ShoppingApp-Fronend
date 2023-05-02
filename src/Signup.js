@@ -42,10 +42,10 @@ const SignupPage = () => {
             })
                 .then(res => {
 
-                    navigate("/")
                 })
                 .catch(err => console.log(err))
 
+                navigate(0)
         }
 
     }
