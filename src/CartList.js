@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import CartProduct from "./CartProduct";
+import { useNavigate } from "react-router-dom";
 const CartList = () => {
 
     const [data, setData] = useState([]);
-
+    const navigate = useNavigate();
     useEffect(() => {
         async function getCart() {
             const res = await fetch("https://shoppingapp.herokuapp.com/product/getfromcart", {
@@ -19,6 +20,9 @@ const CartList = () => {
         getCart();
     }, []);
 
+    const delivery = () =>{
+        navigate("/DeliveryOptions")
+    }
 
     return (
         
@@ -27,7 +31,7 @@ const CartList = () => {
                 <CartProduct key={index} product={item} />
             ))}
             {data.length != 0 ? <div className="text-center  w-100 my-4">
-                <a href="/DeliveryOptions" className="btn btn-primary">Place order</a>
+                <button onClick={delivery} className="btn btn-primary">Place order</button>
             </div> : <></>}
 
         </div>
