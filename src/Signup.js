@@ -21,6 +21,7 @@ const SignupPage = () => {
 
         setErrs(ValidateSignup(firstName, lastName, email, username, password, streetAddress, unitNumber, city, province, country));
         if (Object.keys(ValidateSignup(firstName, lastName, email, username, password, streetAddress, unitNumber, city, province, country)).length === 0) {
+            
             fetch("https://shoppingapp.herokuapp.com/signup", {
                 method: 'POST',
                 headers: {
@@ -40,12 +41,42 @@ const SignupPage = () => {
                 })
 
             })
-                .then(res => {
+
+                .then(res => { return res.json() })
+                .then(data => {
+                    if (data == true) {
+                        toast.success("Login successful.", {
+                            position: 'top-center',
+                            autoClose: 3000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                        });
+
+                        navigate('/')
+                    }
+
+                    else {
+
+                        toast.error("Login fail! ", {
+                            position: 'top-center',
+                            className: 'red-toast',
+                            autoClose: 3000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                        });
+                        navigate("/login")
+                    }
+
 
                 })
                 .catch(err => console.log(err))
 
-                navigate(0)
+            navigate(0)
+
         }
 
     }

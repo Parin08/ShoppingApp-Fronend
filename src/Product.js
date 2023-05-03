@@ -54,7 +54,7 @@ const Product = (props) => {
         async function authorisation() {
             const res = await fetch("https://shoppingapp.herokuapp.com/authenticate");
             const data = await res.json();
-            
+        
             if (data === false) {
                 toast.error("Please Login! ", {
                     position: 'top-center',
