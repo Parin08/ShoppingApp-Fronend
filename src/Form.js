@@ -11,7 +11,7 @@ const GetForm = (props) => {
     const dataReceived = location.state?.data;
     const navigate = useNavigate();
     const [err, setErr] = useState({});
-    
+
 
     const handleForm = (event) => {
         event.preventDefault();
@@ -43,7 +43,10 @@ const GetForm = (props) => {
                         console.log(error)
                     });
             }
-            navigate('/');
+            setTimeout(function () {
+                navigate('/');
+            }, 500);
+
         }
 
     }
