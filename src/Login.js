@@ -95,7 +95,7 @@ const Login = () => {
                         <Button type="submit" className='btn btn-success'>Login</Button>
                     </div>
                     <div classNamw="btn">
-                        <a onClick={signup} className='loginlink'>Sign Up</a>
+                        <button onClick={signup} className='loginlink'>Sign Up</button>
                     </div>
 
 
