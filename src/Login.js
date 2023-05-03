@@ -97,10 +97,10 @@ const Login = () => {
                     <div classNamw="btn">
                         <div onClick={signup} className='loginlink'>Sign Up</div>
                     </div>
-                    <div>
+                    <div className='text-center border border-primary rounded m-4 bg-success text-light p-2'>
                         <p>For admin access</p>
-                        <p>Username:pate0468</p>
-                        <p>Password:3Cfe170c$</p>
+                        <p>Username:&nbsp;&nbsp;&nbsp;pate0468</p>
+                        <p>Password:&nbsp;&nbsp;&nbsp;3Cfe170c$</p>
                     </div>
 
                 </div>
