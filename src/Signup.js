@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import ValidateSignup from './ValidateSignup';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+
 const SignupPage = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
