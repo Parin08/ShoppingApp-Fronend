@@ -33,6 +33,8 @@ const ListOfProducts = (props) => {
         }
         getProductsFromCart();
     }, [])
+
+    
     const authorise = () => {
         async function getCartProducts() {
             const res = await fetch('https://shoppingapp.herokuapp.com/authenticate');
