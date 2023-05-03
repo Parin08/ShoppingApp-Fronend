@@ -10,7 +10,7 @@ const Login = () => {
     const navigate = useNavigate();
     const handleSubmit = (event) => {
         event.preventDefault();
-        fetch("https://localhost:8080/login", {
+        fetch("https://shoppingapp.herokuapp.com/login", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
