@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ShoppingApp-Fronend/static/css/main.4106dc06.css",
-    "main.js": "/ShoppingApp-Fronend/static/js/main.84efcbcb.js",
+    "main.js": "/ShoppingApp-Fronend/static/js/main.cdf54497.js",
     "static/media/fa-solid-900.ttf": "/ShoppingApp-Fronend/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
     "static/media/fa-brands-400.ttf": "/ShoppingApp-Fronend/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
     "static/media/fa-solid-900.woff2": "/ShoppingApp-Fronend/static/media/fa-solid-900.bb975c966c37455a1bc3.woff2",
@@ -12,10 +12,10 @@
     "static/media/fa-v4compatibility.woff2": "/ShoppingApp-Fronend/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
     "index.html": "/ShoppingApp-Fronend/index.html",
     "main.4106dc06.css.map": "/ShoppingApp-Fronend/static/css/main.4106dc06.css.map",
-    "main.84efcbcb.js.map": "/ShoppingApp-Fronend/static/js/main.84efcbcb.js.map"
+    "main.cdf54497.js.map": "/ShoppingApp-Fronend/static/js/main.cdf54497.js.map"
   },
   "entrypoints": [
     "static/css/main.4106dc06.css",
-    "static/js/main.84efcbcb.js"
+    "static/js/main.cdf54497.js"
   ]
 }
