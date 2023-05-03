@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import ValidateSignup from './ValidateSignup';
 import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { useEffect } from 'react';
+
 
 const SignupPage = () => {
     const [firstName, setFirstName] = useState('');
@@ -18,66 +19,47 @@ const SignupPage = () => {
     const [errs, setErrs] = useState({});
     const navigate = useNavigate();
 
+
+    const checkUsername = async (username) => {
+        const res = fetch("https://shoppingapp.herokuapp.com/isunique/" + username);
+        const data = res.json();
+        return data;
+    }
+
     const handleSubmit = (event) => {
         event.preventDefault();
 
         setErrs(ValidateSignup(firstName, lastName, email, username, password, streetAddress, unitNumber, city, province, country));
-        if (Object.keys(ValidateSignup(firstName, lastName, email, username, password, streetAddress, unitNumber, city, province, country)).length === 0) {
-            
-            fetch("https://shoppingapp.herokuapp.com/signup", {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    "city": city,
-                    "country": country,
-                    "email": email,
-                    "firstName": firstName,
-                    "lastName": lastName,
-                    "password": password,
-                    "streetAddress": streetAddress,
-                    "unitNumber": unitNumber,
-                    "username": username,
-                    "province": province
-                })
 
-            })
+        if (checkUsername(username)) {
 
-                .then(res => { return res.json() })
-                .then(data => {
-                    if (data == true) {
-                        toast.success("Login successful.", {
-                            position: 'top-center',
-                            autoClose: 3000,
-                            hideProgressBar: false,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                        });
 
-                        navigate('/')
-                    }
+            if (Object.keys(ValidateSignup(firstName, lastName, email, username, password, streetAddress, unitNumber, city, province, country)).length === 0) {
 
-                    else {
-
-                        toast.error("Login fail! ", {
-                            position: 'top-center',
-                            className: 'red-toast',
-                            autoClose: 3000,
-                            hideProgressBar: false,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                        });
-                        navigate("/login")
-                    }
-
+                fetch("https://shoppingapp.herokuapp.com/signup", {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        "city": city,
+                        "country": country,
+                        "email": email,
+                        "firstName": firstName,
+                        "lastName": lastName,
+                        "password": password,
+                        "streetAddress": streetAddress,
+                        "unitNumber": unitNumber,
+                        "username": username,
+                        "province": province
+                    })
 
                 })
-                .catch(err => console.log(err))
+                    .catch(err => console.log(err))
 
-            navigate(0)
+                navigate(0)
+
+            }
 
         }
 
