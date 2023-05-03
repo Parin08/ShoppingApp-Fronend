@@ -95,9 +95,13 @@ const Login = () => {
                         <Button type="submit" className='btn btn-success'>Login</Button>
                     </div>
                     <div classNamw="btn">
-                        <button onClick={signup} className='loginlink'>Sign Up</button>
+                        <div onClick={signup} className='loginlink'>Sign Up</div>
                     </div>
-
+                    <div>
+                        <p>For admin access</p>
+                        <p>Username:pate0468</p>
+                        <p>Password:3Cfe170c$</p>
+                    </div>
 
                 </div>
             </Form>

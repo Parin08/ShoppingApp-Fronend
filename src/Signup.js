@@ -186,7 +186,7 @@ const SignupPage = () => {
 
                 <div classNamw="btn">
                     <Button type="submit" className='btn btn-success' >Sign up</Button>
-                    <a onClick={login} className='loginlink'>Login</a>
+                    <div onClick={login} className='loginlink'>Login</div>
                 </div>
             </Form>
 
