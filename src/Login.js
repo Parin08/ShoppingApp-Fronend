@@ -6,7 +6,7 @@ const Login = () => {
 
     const [password, setPassword] = useState('');
     const [username, setUsername] = useState('');
-
+   
     const navigate = useNavigate();
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -24,7 +24,7 @@ const Login = () => {
         })
             .then(res => { return res.json() })
             .then(data => {
-                if (data == true) {
+                if (data == true){
                     toast.success("Login successful.", {
                         position: 'top-center',
                         autoClose: 3000,
@@ -33,14 +33,12 @@ const Login = () => {
                         pauseOnHover: true,
                         draggable: true,
                     });
-
-                    setTimeout(function () {
-                        navigate('/');
-                    }, 500);
+                   
+                    navigate('/')
                 }
-
-                else {
-
+                   
+                else{
+                    
                     toast.error("Login fail! ", {
                         position: 'top-center',
                         className: 'red-toast',
@@ -50,17 +48,20 @@ const Login = () => {
                         pauseOnHover: true,
                         draggable: true,
                     });
-                    setTimeout(function () {
-                        navigate('/Login');
-                    }, 500);
+                    navigate("/login")
                 }
 
-
+                    
             })
             .catch(err => console.log(err))
+    
+            navigate(0)
+         
+    
+            
     }
 
-    const signup = () => {
+    const signup = ()=>{
         navigate('/Signup');
     }
 
