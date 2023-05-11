@@ -81,7 +81,7 @@ const Header = () => {
                         pauseOnHover: true,
                         draggable: true,
                     });
-                    navigate('/Login');
+                    navigate(0);
                 }
             }
             
