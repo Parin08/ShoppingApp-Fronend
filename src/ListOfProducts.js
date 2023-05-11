@@ -40,8 +40,8 @@ const ListOfProducts = (props) => {
             const res = await fetch('https://shoppingapp.herokuapp.com/authenticate');
             const data = await res.json();
             if (data == true) {
-            
-                navigate('/Cart');
+                setTimeout(() => navigate('/Cart'), 1000);
+                
             } else {
 
                 toast.error("Please Login First!", {
